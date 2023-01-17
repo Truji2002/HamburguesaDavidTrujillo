@@ -16,8 +16,7 @@
             <Entry x:Name="descBDT" Text="{Binding DescriptionDT}" />
             <Label Text="¿Con queso extra?" />
             <CheckBox x:Name="checkDT"
-                      IsChecked="{Binding WithExtraCheeseDT}"
-            CheckedChanged="OnCheckBoxCheckedChanged" />
+                      IsChecked="{Binding WithExtraCheeseDT}" />
             <Button Text="GuardarDT"
             Clicked="OnSaveClicked" />
             <Button Text="CancelarDT"

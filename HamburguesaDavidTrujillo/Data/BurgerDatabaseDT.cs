@@ -27,8 +27,16 @@ namespace HamburguesaDavidTrujillo.Data
         public int AddNewBurger(BurgerDT burger)
         {
             Init();
-            int result = conn.Insert(burger);
-            return result;
+            //int result = conn.Insert(burger);
+            //return result;
+            if(burger.Id != 0)
+            {
+                return conn.Update(burger);
+            }
+            else
+            {
+                return conn.Insert(burger);
+            }
         }
         public List<BurgerDT> GetAllBurgers()
         {

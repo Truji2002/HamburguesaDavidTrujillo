@@ -8,12 +8,12 @@ public partial class BurgerItemPageDT : ContentPage
 {
 	
         public BurgerDT Item
-    {
+        {
         get => BindingContext as BurgerDT;
         set => BindingContext = value;
-    }
-        BurgerDT ItemDT = new BurgerDT();
-        bool _flagDT;
+        }
+        //BurgerDT ItemDT = new BurgerDT();
+        //bool _flagDT;
 
         public BurgerItemPageDT()
         {
@@ -24,10 +24,10 @@ public partial class BurgerItemPageDT : ContentPage
 
         private void OnSaveClicked(object sender, EventArgs e)
         {
-            ItemDT.NameDT = nameBDT.Text;
-            ItemDT.DescriptionDT = descBDT.Text;
-            ItemDT.WithExtraCheeseDT = _flagDT;
-            App.BurgerRepoDT.AddNewBurger(ItemDT);
+            //ItemDT.NameDT = nameBDT.Text;
+            //ItemDT.DescriptionDT = descBDT.Text;
+            //ItemDT.WithExtraCheeseDT = _flagDT;
+            App.BurgerRepoDT.AddNewBurger(Item);
             Shell.Current.GoToAsync("///BurgerListPageDT");
             
         }
@@ -35,11 +35,11 @@ public partial class BurgerItemPageDT : ContentPage
         {
             Shell.Current.GoToAsync("///BurgerListPageDT");
         }
-        private void OnCheckBoxCheckedChanged(object sender,
-       CheckedChangedEventArgs e)
-        {
-            _flagDT = e.Value;
-        }
+       // private void OnCheckBoxCheckedChanged(object sender,
+       //CheckedChangedEventArgs e)
+       // {
+       //     //_flagDT = e.Value;
+       // }
 
     private void OnBorrarClicked(object sender, EventArgs e)
     {
