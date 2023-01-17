@@ -10,10 +10,14 @@ public partial class BurgerListPageDT : ContentPage
         InitializeComponent();
         List<BurgerDT> burger = App.BurgerRepoDT.GetAllBurgers();
         burgerList.ItemsSource = burger;
+        BindingContext = this;
     }
-    async void OnItemAdded(object sender, EventArgs e)
+    public void OnItemAdded(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(BurgerItemPageDT));
+        Shell.Current.GoToAsync(nameof(BurgerItemPageDT), true, new Dictionary<string, object>
+        {
+            ["Item"]=new BurgerDT()
+        });
     }
     public void ActualizarListaDT()
     {
