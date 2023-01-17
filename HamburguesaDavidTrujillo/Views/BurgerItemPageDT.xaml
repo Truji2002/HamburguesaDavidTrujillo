@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HamburguesaDavidTrujillo.Views.BurgerItemPageDT"
+             xmlns:models="clr-namespace:HamburguesaDavidTrujillo.Models"
+             Title="BurgerItemPageDT">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+        Spacing="10"
+        VerticalOptions="StartAndExpand">
+            <Label Text="Nombre" />
+            <Entry x:Name="nameBDT" Text="{Binding NameDT}" />
+            <Label Text="Descripción" />
+            <Entry x:Name="descBDT" Text="{Binding DescriptionDT}" />
+            <Label Text="¿Con queso extra?" />
+            <CheckBox x:Name="checkDT"
+                      IsChecked="{Binding WithExtraCheeseDT}"
+            CheckedChanged="OnCheckBoxCheckedChanged" />
+            <Button Text="GuardarDT"
+            Clicked="OnSaveClicked" />
+            <Button Text="CancelarDT"
+            Clicked="OnCancelClicked" />
+            <Button Text="BorrarDT"
+            Clicked="OnBorrarClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
