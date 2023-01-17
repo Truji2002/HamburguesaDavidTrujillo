@@ -36,7 +36,7 @@ public partial class BurgerListPageDT : ContentPage
 
     private void OnCollectionView_SelectionChangedDT(object sender, SelectionChangedEventArgs e)
     {
-        BurgerDT burger= e.CurrentSelection.FirstOrDefault() as BurgerDT;
+        BurgerDT burger = e.CurrentSelection.FirstOrDefault() as BurgerDT;
         if (burger == null)
         {
             return;
@@ -46,5 +46,6 @@ public partial class BurgerListPageDT : ContentPage
             { "Item", burger}
         });
         ((CollectionView)sender).SelectedItem = null;
+
     }
 }
