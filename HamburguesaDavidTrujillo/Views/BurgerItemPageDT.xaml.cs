@@ -43,6 +43,6 @@ public partial class BurgerItemPageDT : ContentPage
 
     private void OnBorrarClicked(object sender, EventArgs e)
     {
-
+        App.BurgerRepoDT.DeleteBurger(Item);
     }
 }

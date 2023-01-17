@@ -44,6 +44,11 @@ namespace HamburguesaDavidTrujillo.Data
             List<BurgerDT> burgers = conn.Table<BurgerDT>().ToList();
             return burgers;
         }
+        public int DeleteBurger(BurgerDT item)
+        {
+            Init();
+            return conn.Delete(item);
+        }
 
     }
 }
