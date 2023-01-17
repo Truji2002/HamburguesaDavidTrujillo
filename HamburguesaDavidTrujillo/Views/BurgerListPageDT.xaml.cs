@@ -30,7 +30,7 @@ public partial class BurgerListPageDT : ContentPage
     }
 
 
-    private void OnCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private void OnCollectionView_SelectionChangedDT(object sender, SelectionChangedEventArgs e)
     {
 
     }
