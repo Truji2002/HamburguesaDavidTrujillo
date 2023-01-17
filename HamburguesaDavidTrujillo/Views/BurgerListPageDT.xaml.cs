@@ -36,6 +36,15 @@ public partial class BurgerListPageDT : ContentPage
 
     private void OnCollectionView_SelectionChangedDT(object sender, SelectionChangedEventArgs e)
     {
-
+        BurgerDT burger= e.CurrentSelection.FirstOrDefault() as BurgerDT;
+        if (burger == null)
+        {
+            return;
+        }
+        Shell.Current.GoToAsync(nameof(BurgerItemPageDT), true, new Dictionary<string, object>
+        {
+            { "Item", burger}
+        });
+        ((CollectionView)sender).SelectedItem = null;
     }
 }
