@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HamburguesaDavidTrujillo.Views.BurgerItemPageDT"
              xmlns:models="clr-namespace:HamburguesaDavidTrujillo.Models"
+             xmlns:local="clr-namespace:HamburguesaDavidTrujillo.ViewModels"
              Title="BurgerItemPageDT">
 
     <ScrollView>
@@ -17,6 +18,13 @@
             <Label Text="¿Con queso extra?" />
             <CheckBox x:Name="checkDT"
                       IsChecked="{Binding WithExtraCheeseDT}" />
+            <Label x:Name="FechaDT"/>
+            <Label x:Name="fuente"
+                   Text="{Binding DateTime, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}">
+                <Label.BindingContext>
+                    <local:DateViewModel/>
+                </Label.BindingContext>
+            </Label>
             <Button Text="GuardarDT"
             Clicked="OnSaveClicked" />
             <Button Text="CancelarDT"

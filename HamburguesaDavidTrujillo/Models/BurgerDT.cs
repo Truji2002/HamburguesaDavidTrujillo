@@ -18,6 +18,9 @@ namespace HamburguesaDavidTrujillo.Models
             public string NameDT { get; set; }
             public string DescriptionDT { get; set; }
             public bool WithExtraCheeseDT { get; set; }
-        
+
+            public DateTime DateTimeDT { get; set; }
+
+
     }
 }
